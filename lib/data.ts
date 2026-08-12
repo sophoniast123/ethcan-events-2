@@ -16,11 +16,11 @@ export const EVENT = {
   name: "World Tourism Day 2026 Celebration",
   theme: "Digital Agenda and Artificial Intelligence to Redesign Tourism",
   city: "Addis Ababa, Ethiopia",
-  dateLabel: "25 – 27 September 2026",
+  dateLabel: "24 – 26 September 2026",
   // Countdown target: World Tourism Day 2026
   targetDate: "2026-09-25T09:00:00+03:00",
   email: "ethcanevents@gmail.com",
-  phone: "+251 976 629 099/+1 519 722 8295 (CAN)",
+  phone: "+251 976 629 099/+251 976 629 099/+1 519 722 8295 (CAN)",
   address: "Glory Building, 6th Floor, Office 605, Addis Ababa, Ethiopia / 10 Indigo Street, Kitchener, Ontario, Canada, N2E4E8",
   hours: "Mon–Sat, 8:30 AM – 6:30 PM EAT",
 };
@@ -124,14 +124,14 @@ export const PROGRAMME: ProgrammeItem[] = [
   {
     title: "Destination & Hospitality Exhibitions",
     category: "Exhibitions",
-    day: "Day 1–4",
+    day: "Day 1–3",
     text: "Destinations, hotels, airlines and travel-tech innovators exhibit to thousands of trade and public visitors.",
     image: PROGRAMME_IMAGES[4],
   },
   {
     title: "Pan-African Cultural Programmes",
     category: "Culture & Community",
-    day: "Day 1–4",
+    day: "Day 1–3",
     text: "Music, dance, cuisine and fashion showcases celebrating Ethiopia and the wider African continent.",
     image: PROGRAMME_IMAGES[5],
   },
@@ -158,19 +158,19 @@ export const PROGRAMME: ProgrammeItem[] = [
   {
     title: "City & Heritage Familiarization Tours",
     category: "Culture & Community",
-    day: "Day 4",
+    day: "Day 3",
     text: "Guided experiences across Addis Ababa's museums, markets and landmarks for international delegates.",
   },
   {
     title: "Gala Dinner & Tourism Excellence Awards",
     category: "Ceremonies",
-    day: "Day 4",
+    day: "Day 3",
     text: "A celebratory evening honouring outstanding contributions to Ethiopian and African tourism.",
   },
   {
     title: "Closing Ceremony & Addis Declaration",
     category: "Ceremonies",
-    day: "Day 4",
+    day: "Day 3",
     text: "Adoption of the Addis Ababa declaration on AI and the digital future of African tourism.",
   },
 ];
