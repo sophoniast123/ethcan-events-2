@@ -50,6 +50,7 @@ export const TICKER_WORDS = [
 ];
 
 export const STATS = [
+  { value: 25000, suffix: "+", label: "Attendees" },
   { value: 15000, suffix: "+", label: "Expected Delegates" },
   { value: 60, suffix: "+", label: "Countries Represented" },
   { value: 40, suffix: "+", label: "Forums & Sessions" },
