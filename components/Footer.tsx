@@ -73,11 +73,18 @@ export default function Footer() {
             <li>🏢 Addis Ababa, Ethiopia</li>
           </ul>
           <div className="mt-5 flex gap-3">
-            {["𝕏", "f", "in", "▶"].map((s) => (
+            {[
+              { s: "𝕏", href: "https://twitter.com/", label: "X (Twitter)" },
+              { s: "f", href: "https://facebook.com/", label: "Facebook" },
+              { s: "in", href: "https://linkedin.com/", label: "LinkedIn" },
+              { s: "▶", href: "https://youtube.com/", label: "YouTube" },
+            ].map(({ s, href, label }) => (
               <a
                 key={s}
-                href="#"
-                aria-label={`ETHCAN social ${s}`}
+                href= {href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`ETHCAN social ${label}`}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-sm font-bold transition hover:bg-gradient-to-br hover:from-gold-500 hover:to-terra-500"
               >
                 {s}
