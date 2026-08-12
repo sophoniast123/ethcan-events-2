@@ -15,10 +15,10 @@ export const GALLERY_IMAGES = ALL_IMAGES.slice(21, 45); // 22–45 gallery grid
 export const EVENT = {
   name: "World Tourism Day 2026 Celebration",
   theme: "Digital Agenda and Artificial Intelligence to Redesign Tourism",
-  city: "Addis Ababa, Ethiopia",
+  city: "Science Museum, Addis Ababa, Ethiopia",
   dateLabel: "24 – 26 September 2026",
   // Countdown target: World Tourism Day 2026
-  targetDate: "2026-09-25T09:00:00+03:00",
+  targetDate: "2026-09-24T09:00:00+03:00",
   email: "ethcanevents@gmail.com",
   phone: "+251 976 629 099/+251 976 629 099/+1 519 722 8295 (CAN)",
   address: "Glory Building, 6th Floor, Office 605, Addis Ababa, Ethiopia / 10 Indigo Street, Kitchener, Ontario, Canada, N2E4E8",
