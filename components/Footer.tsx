@@ -62,7 +62,7 @@ export default function Footer() {
           <h4 className="mb-4 text-sm font-black uppercase tracking-[0.2em] text-gold-300">
             Contact
           </h4>
-          <ul className="space-y-2.5 text-sm text-white/70">
+          <ul className="space-y-2.5 text-sm text-white/70 leading-relaxed">
             <li>
               ✉️{" "}
               <a href={`mailto:${EVENT.email}`} className="transition hover:text-gold-300">
@@ -70,7 +70,8 @@ export default function Footer() {
               </a>
             </li>
             <li>📞 {EVENT.phone}</li>
-            <li>🏢 Addis Ababa, Ethiopia</li>
+            <li>🏢 {EVENT.address}</li>
+            <li>🕒 {EVENT.hours}</li>
           </ul>
           <div className="mt-5 flex gap-3">
             {[

@@ -290,7 +290,7 @@ export default function Registration() {
           </div>
 
           <p className="mt-4 text-center text-xs text-ink/50">
-            Submissions are emailed securely to{" "}
+            Submissions are sent securely via FormSubmit to{" "}
             <a href="mailto:ethcanevents@gmail.com" className="font-bold text-emerald2-700 underline">
               ethcanevents@gmail.com
             </a>
