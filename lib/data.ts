@@ -16,11 +16,11 @@ export const EVENT = {
   name: "World Tourism Day 2026 Celebration",
   theme: "Digital Agenda and Artificial Intelligence to Redesign Tourism",
   city: "Addis Ababa, Ethiopia",
-  dateLabel: "24 – 27 September 2026",
+  dateLabel: "25 – 27 September 2026",
   // Countdown target: World Tourism Day 2026
-  targetDate: "2026-09-24T09:00:00+03:00",
+  targetDate: "2026-09-25T09:00:00+03:00",
   email: "ethcanevents@gmail.com",
-  phone: "+251 911 000 000",
+  phone: "+251 976 629 099 ",
 };
 
 export const NAV_LINKS = [
