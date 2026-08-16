@@ -1,16 +1,16 @@
 // Central data for the ETHCAN Events site.
 
 export const ALL_IMAGES = Array.from(
-  { length: 45 },
+  { length: 73 },
   (_, i) => `/img/event-${String(i + 1).padStart(2, "0")}.jpg`
 );
 
-// Curated slices so every image gets used somewhere on the page.
-export const HERO_IMAGES = ALL_IMAGES.slice(0, 5); // 01–05 rotating hero backdrop
-export const ABOUT_IMAGES = ALL_IMAGES.slice(5, 9); // 06–09 collage
-export const WTD_IMAGES = ALL_IMAGES.slice(9, 13); // 10–13 main event section
-export const PROGRAMME_IMAGES = ALL_IMAGES.slice(13, 21); // 14–21 programme cards
-export const GALLERY_IMAGES = ALL_IMAGES.slice(21, 45); // 22–45 gallery grid
+// Curated slices so every image gets used somewhere on the page (all from new images 44-73).
+export const HERO_IMAGES = ALL_IMAGES.slice(43, 73); // 44–73 rotating hero backdrop
+export const ABOUT_IMAGES = ALL_IMAGES.slice(43, 51); // 44–51 collage
+export const WTD_IMAGES = ALL_IMAGES.slice(51, 55); // 52–55 main event section
+export const PROGRAMME_IMAGES = ALL_IMAGES.slice(13, 21); // 56–63 programme cards
+export const GALLERY_IMAGES = ALL_IMAGES.slice(63, 72); // 64–73 gallery grid
 
 export const EVENT = {
   name: "World Tourism Day 2026 Celebration",
@@ -20,7 +20,7 @@ export const EVENT = {
   // Countdown target: World Tourism Day 2026
   targetDate: "2026-09-24T09:00:00+03:00",
   email: "ethcanevents@gmail.com",
-  phone: "+251 976 629 099/+251 976 629 099/+1 519 722 8295 (CAN)",
+  phone: "+251 976 629 099 / +251 976 629 199 /+1 519 722 8295 (CAN)",
   address: "Glory Building, 6th Floor, Office 605, Addis Ababa, Ethiopia / 10 Indigo Street, Kitchener, Ontario, Canada, N2E4E8",
   hours: "Mon–Sat, 8:30 AM – 6:30 PM EAT",
 };
@@ -50,11 +50,12 @@ export const TICKER_WORDS = [
 ];
 
 export const STATS = [
-  { value: 25000, suffix: "+", label: "Attendees" },
+  { value: 500, suffix: "+", label: "Strategic Partners" },
+  { value: 300000, suffix: "+", label: "Attendees" },
   { value: 15000, suffix: "+", label: "Expected Delegates" },
   { value: 60, suffix: "+", label: "Countries Represented" },
   { value: 40, suffix: "+", label: "Forums & Sessions" },
-  { value: 120, suffix: "+", label: "Exhibitors & Brands" },
+  { value: 120, suffix: "+", label: "Exhibitors & Brands" }
 ];
 
 export const PILLARS = [

@@ -4,14 +4,6 @@ import Reveal from "@/components/motion/Reveal";
 import TiltCard from "@/components/motion/TiltCard";
 import { PARTNER_TIERS } from "@/lib/data";
 
-function initials(name: string) {
-  return name
-    .split(" ")
-    .filter((w) => w[0] === w[0]?.toUpperCase())
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("");
-}
 
 export default function Sponsors() {
   return (
@@ -53,9 +45,7 @@ export default function Sponsors() {
                 {tier.partners.map((p) => (
                   <TiltCard key={p.name} maxTilt={6}>
                     <div className="group flex h-full items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition-all duration-300 hover:border-gold-300/50 hover:bg-white/10 hover:shadow-lg hover:shadow-gold-500/10">
-                      <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold-400 to-terra-500 font-display text-lg font-black text-white shadow-md transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        {initials(p.name)}
-                      </span>
+                      
                       <span>
                         <span className="block font-bold text-white group-hover:text-gold-200">
                           {p.name}
