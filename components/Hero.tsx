@@ -141,21 +141,6 @@ export default function Hero() {
             )
           )}
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.75, duration: 0.8 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
-        >
-          <a href="#register" className="btn-primary">
-            Register Now
-            <span aria-hidden>→</span>
-          </a>
-          <a href="#wtd2026" className="btn-outline">
-            Explore WTD 2026
-          </a>
-        </motion.div>
       </motion.div>
 
       {/* Marquee ticker */}

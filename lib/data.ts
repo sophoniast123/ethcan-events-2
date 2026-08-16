@@ -1,16 +1,16 @@
 // Central data for the ETHCAN Events site.
 
 export const ALL_IMAGES = Array.from(
-  { length: 73 },
+  { length: 72 },
   (_, i) => `/img/event-${String(i + 1).padStart(2, "0")}.jpg`
 );
 
 // Curated slices so every image gets used somewhere on the page (all from new images 44-73).
 export const HERO_IMAGES = ALL_IMAGES.slice(43, 73); // 44–73 rotating hero backdrop
 export const ABOUT_IMAGES = ALL_IMAGES.slice(43, 51); // 44–51 collage
-export const WTD_IMAGES = ALL_IMAGES.slice(51, 55); // 52–55 main event section
+export const WTD_IMAGES = ALL_IMAGES.slice(56, 60); // 52–55 main event section
 export const PROGRAMME_IMAGES = ALL_IMAGES.slice(13, 21); // 56–63 programme cards
-export const GALLERY_IMAGES = ALL_IMAGES.slice(63, 72); // 64–73 gallery grid
+export const GALLERY_IMAGES = ALL_IMAGES.slice(63, 71); // 64–73 gallery grid
 
 export const EVENT = {
   name: "World Tourism Day 2026 Celebration",

@@ -19,21 +19,10 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="et-ribbon" />
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`transition-all duration-300 ${
-          scrolled
-            ? "bg-ink/90 py-2.5 shadow-xl shadow-black/20 backdrop-blur-lg"
-            : "bg-gradient-to-b from-black/60 to-transparent py-4"
-        }`}
-      >
+      
         <div className="container-x flex items-center justify-between gap-4">
           <Link href="#home" className="group flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-gold-400 via-terra-500 to-emerald2-600 font-display text-lg font-black text-white shadow-lg transition-transform group-hover:scale-105">
-              E
-            </span>
+            
             <span className="leading-tight">
               <span className="block font-display text-lg font-bold tracking-wide text-white">
                 ETHCAN <span className="text-gold-300">Events</span>
@@ -111,7 +100,6 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
     </header>
   );
 }
