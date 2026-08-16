@@ -115,7 +115,7 @@ export default function Hero() {
           className="mt-6 max-w-2xl text-base text-white/85 sm:text-lg"
         >
           Join ETHCAN Events for a multi-day global celebration of tourism, technology and
-          culture — {EVENT.dateLabel}, in the diplomatic capital of Africa.
+          culture — {EVENT.dateLabel}, Starting from 9:00 AM – 5:00 PM Daily at Science Museum, Addis Ababa, Ethiopia.
         </motion.p>
 
         {/* Countdown */}
@@ -141,6 +141,7 @@ export default function Hero() {
             )
           )}
         </motion.div>
+
       </motion.div>
 
       {/* Marquee ticker */}

@@ -8,9 +8,6 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-gold-400 via-terra-500 to-emerald2-600 font-display text-lg font-black">
-              E
-            </span>
             <span className="font-display text-xl font-bold">
               ETHCAN <span className="text-gold-300">Events</span>
             </span>
@@ -46,6 +43,8 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm text-white/70">
             <li>📅 {EVENT.dateLabel}</li>
             <li>📍 {EVENT.city}</li>
+            <li> 🕔 Program Hours: 9:00 AM – 5:00 PM Daily </li>
+            
             <li className="leading-relaxed">
               🎯 Theme: &ldquo;{EVENT.theme}&rdquo;
             </li>
