@@ -1,9 +1,11 @@
 import About from "@/components/About";
+import EthiopianCulinary from "@/components/EthiopianCulinary";
 import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import PanAfricaCultures from "@/components/PanAfricaCultures";
 import Participation from "@/components/Participation";
 import Pillars from "@/components/Pillars";
 import Programme from "@/components/Programme";
@@ -17,6 +19,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <PanAfricaCultures />
+      <EthiopianCulinary />
       <WorldTourismDay />
       <Pillars />
       <Programme />

@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { EVENT, HERO_IMAGES, TICKER_WORDS } from "@/lib/data";
+import { EVENT, EVENT_SCHEDULE, HERO_IMAGES, TICKER_WORDS } from "@/lib/data";
 
 function useCountdown(target: string) {
   const calc = () => {
@@ -140,6 +140,69 @@ export default function Hero() {
               </div>
             )
           )}
+        </motion.div>
+
+        {/* Event Schedule */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.75, duration: 0.8 }}
+          className="mt-10 w-full max-w-5xl flex flex-col lg:flex-row gap-6 items-start"
+        >
+          {/* Event Schedule */}
+          <div className="flex-1 lg:max-w-2xl w-full"/>
+            <div className="rounded-2xl border border-white/15 bg-white/5 p-4 sm:p-6 backdrop-blur-md h-full">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+              <div className="flex items-center gap-2 text-white/90">
+                <svg className="w-5 h-5 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="font-semibold text-sm sm:text-base">Event Schedule</span>
+              </div>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-gold-300/80 whitespace-nowrap">
+                {EVENT.timezoneLabel} · {EVENT.timezone}
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              {EVENT_SCHEDULE.map((s, i) => (
+                <div
+                  key={s.day}
+                  className="relative rounded-xl border border-white/10 bg-white/5 p-3 sm:p-4 text-center transition-all duration-300 hover:border-gold-300/40 hover:bg-white/10"
+                >
+                  <div className="font-display text-lg font-bold text-white sm:text-xl">
+                    {s.day.split(",")[0]}
+                  </div>
+                  <div className="text-[10px] text-white/60 uppercase tracking-wider mt-0.5">
+                    {s.day.split(",").slice(1).join(",").trim()}
+                  </div>
+                  <div className="mt-2 font-semibold text-gold-300 text-sm sm:text-base">
+                    {s.time}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Show Location Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="mt-8"
+        >
+          <a
+            href={EVENT.locationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-terra-500 px-8 py-4 font-bold text-white shadow-lg shadow-terra-500/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-terra-500/40 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-ink"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Show Location
+          </a>
         </motion.div>
 
       </motion.div>
