@@ -68,7 +68,8 @@ export default function Footer() {
                 {EVENT.email}
               </a>
             </li>
-            <li>📞 {EVENT.phone}</li>
+            <li>📞 {EVENT.phone1}</li>
+            <li>📞 {EVENT.phone2}</li>
             <li>🏢 {EVENT.address}</li>
             <li>🕒 {EVENT.hours}</li>
           </ul>
