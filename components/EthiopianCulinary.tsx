@@ -7,8 +7,8 @@ import Image from "next/image";
 import { ETHIOPIAN_CULINARY, type CulinaryItem } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 
-const TRANSITION_DURATION = 0.7;
-const AUTO_PLAY_INTERVAL = 6000;
+const TRANSITION_DURATION = 0.5;
+const AUTO_PLAY_INTERVAL = 5000;
 
 export default function EthiopianCulinary() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -110,7 +110,7 @@ export default function EthiopianCulinary() {
           {/* Main slide */}
           <motion.div
             className="relative rounded-3xl overflow-hidden bg-white shadow-2xl"
-            style={{ aspectRatio: "4 / 3", maxWidth: "100%" }}
+            style={{ aspectRatio: "4 / 3", maxWidth: "900px", margin: "0 auto" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: TRANSITION_DURATION }}

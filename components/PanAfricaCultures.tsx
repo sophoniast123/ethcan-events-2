@@ -6,7 +6,7 @@ import Image from "next/image";
 import { PANAFRICA_CULTURES, type CultureItem } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 
-const TRANSITION_DURATION = 0.7;
+const TRANSITION_DURATION = 0.3;
 const AUTO_PLAY_INTERVAL = 5000;
 
 export default function PanAfricaCultures() {
@@ -104,7 +104,7 @@ export default function PanAfricaCultures() {
           {/* Main slide */}
           <motion.div
             className="relative rounded-3xl overflow-hidden bg-ink"
-            style={{ aspectRatio: "16 / 9", maxWidth: "100%" }}
+            style={{ aspectRatio: "4 / 3", maxWidth: "900px", margin: "0 auto" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: TRANSITION_DURATION }}

@@ -176,12 +176,6 @@ export const PROGRAMME: ProgrammeItem[] = [
     text: "Guided experiences across Addis Ababa's museums, markets and landmarks for international delegates.",
   },
   {
-    title: "Gala Dinner & Tourism Excellence Awards",
-    category: "Ceremonies",
-    day: "Day 3",
-    text: "A celebratory evening honouring outstanding contributions to Ethiopian and African tourism.",
-  },
-  {
     title: "Closing Ceremony & Addis Declaration",
     category: "Ceremonies",
     day: "Day 3",
@@ -272,7 +266,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "East Africa",
     country: "Ethiopia",
     description: "Ancient Christian traditions, rock-hewn churches of Lalibela, unique calendar and script, and the birthplace of coffee.",
-    image: "https://images.unsplash.com/photo-1555090528-66498a61e3f5?w=1200&q=80",
+    image: "/f&b/ethiopia.jpg",
     category: "Heritage & Religion",
   },
   {
@@ -281,7 +275,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "West Africa",
     country: "Ghana, Nigeria, Senegal, Mali",
     description: "Rich traditions of griots (oral historians), kente cloth, highlife music, and ancient empires like Ghana, Mali, and Songhai.",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1200&q=80",
+    image: "/f&b/west.jpg",
     category: "Music & Textiles",
   },
   {
@@ -290,7 +284,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "East Africa",
     country: "Kenya, Tanzania, Uganda, Rwanda",
     description: "Maasai beadwork, Swahili coastal heritage, Great Rift Valley cultures, and vibrant contemporary arts scenes in Nairobi and Dar es Salaam.",
-    image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200&q=80",
+    image: "/f&b/east.jpg",
     category: "Traditions & Landscapes",
   },
   {
@@ -299,7 +293,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Southern Africa",
     country: "South Africa, Zimbabwe, Botswana, Namibia",
     description: "San rock art, Zulu and Xhosa traditions, Cape Malay cuisine, and the dynamic creative energy of Johannesburg and Cape Town.",
-    image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80",
+    image: "/f&b/south.jpg",
     category: "Art & Heritage",
   },
   {
@@ -308,7 +302,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "North Africa",
     country: "Morocco, Egypt, Tunisia, Algeria",
     description: "Medina architecture, Berber (Amazigh) heritage, Islamic art and calligraphy, ancient pharaonic legacy, and vibrant souk culture.",
-    image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=1200&q=80",
+    image: "/f&b/north.jpg",
     category: "Architecture & History",
   },
   {
@@ -317,7 +311,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Continent-wide",
     country: "Various Nations",
     description: "Kente (Ghana), Ankara (West Africa), Kitenge (East Africa), Shweshwe (Southern Africa), Djellaba (North Africa) — textiles that tell stories.",
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=1200&q=80",
+    image: "/f&b/clothing.jpg",
     category: "Fashion & Textiles",
   },
   {
@@ -326,7 +320,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Continent-wide",
     country: "Various Nations",
     description: "Timkat (Ethiopia), FESPACO (Burkina Faso), Cape Town Jazz Festival, Festival au Désert (Mali), Calabar Carnival (Nigeria) — celebrations of life.",
-    image: "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=1200&q=80",
+    image: "/f&b/festival.jpg",
     category: "Celebration & Community",
   },
   {
@@ -335,7 +329,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Continent-wide",
     country: "Various Nations",
     description: "Contemporary masters like El Anatsui, Wangechi Mutu, Zanele Muholi; ancient Benin bronzes, Dogon sculpture, and thriving gallery scenes.",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=80",
+    image: "/f&b/art.jpg",
     category: "Visual Arts",
   },
   {
@@ -344,7 +338,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Continent-wide",
     country: "Various Nations",
     description: "Afrobeat (Fela Kuti), Amapiano (SA), Highlife, Gnawa (Morocco), Ethio-jazz (Mulatu Astatke), traditional drumming — the heartbeat of the continent.",
-    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80",
+    image: "/f&b/dance.jpg",
     category: "Performing Arts",
   },
   {
@@ -353,7 +347,7 @@ export const PANAFRICA_CULTURES: CultureItem[] = [
     region: "Continent-wide",
     country: "Various Nations",
     description: "Great Zimbabwe stone ruins, Djenné mud mosque (Mali), Lalibela churches (Ethiopia), Kasbahs (Morocco), Cape Dutch architecture — built heritage across millennia.",
-    image: "https://images.unsplash.com/photo-1585199242-1243d64b1e2c?w=1200&q=80",
+    image: "/f&b/arch.jpg",
     category: "Built Heritage",
   },
 ];
@@ -378,7 +372,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Ethiopia's iconic spongy sourdough flatbread made from teff flour — the foundation of every traditional meal.",
     ingredients: "Teff flour, water, fermentation starter (ersho)",
     culturalNote: "Injera doubles as both plate and utensil — tear off pieces to scoop up stews. A symbol of Ethiopian hospitality and community dining.",
-    image: "https://images.unsplash.com/photo-1632187817234-0b64b6c2b5b5?w=1200&q=80",
+    image: "/f&b/injera.jpg",
     category: "Staple Bread",
   },
   {
@@ -388,7 +382,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Ethiopia's national dish — rich, spicy chicken stew simmered in berbere spice blend with hard-boiled eggs.",
     ingredients: "Chicken, berbere spice, onions, niter kibbeh (spiced butter), garlic, ginger, eggs",
     culturalNote: "Traditionally served for holidays and special occasions. The eggs symbolize prosperity and are often given to honored guests.",
-    image: "https://images.unsplash.com/photo-1625938658445-5c4a8e8b4e9e?w=1200&q=80",
+    image: "/f&b/doro wot.jpg",
     category: "Stew",
   },
   {
@@ -398,7 +392,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Minced raw beef marinated in mitmita (chili powder) and niter kibbeh — a delicacy from the Gurage region.",
     ingredients: "Prime beef, mitmita spice, niter kibbeh, korerima (Ethiopian cardamom)",
     culturalNote: "Served lebleb (lightly cooked) or raw. Traditionally accompanied by ayib (fresh cheese) and gomen (collard greens) to balance the heat.",
-    image: "https://images.unsplash.com/photo-1607619056574-7b8d2ee536b6?w=1200&q=80",
+    image: "/f&b/kitfo.jpg",
     category: "Specialty",
   },
   {
@@ -408,7 +402,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Sautéed beef or lamb with onions, peppers, and rosemary — served sizzling in a clay dish.",
     ingredients: "Beef/lamb, onions, peppers, tomatoes, rosemary, niter kibbeh, berbere",
     culturalNote: "A popular celebratory dish. Served in a heated clay pot (melekia) that keeps it sizzling at the table.",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&q=80",
+    image: "/f&b/Awaze Tibs.jpg",
     category: "Grilled/Sautéed",
   },
   {
@@ -418,7 +412,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Velvety chickpea or broad bean stew flavored with berbere, garlic, and onions — a beloved vegetarian staple.",
     ingredients: "Chickpea/broad bean flour, berbere, onions, garlic, niter kibbeh",
     culturalNote: "Essential during Orthodox fasting periods (tsom) when animal products are avoided. Every region has its own variation.",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200&q=80",
+    image: "/f&b/Shiro Wot.jpg",
     category: "Vegetarian Stew",
   },
   {
@@ -428,7 +422,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "A colorful vegetarian platter featuring 6–12 different stews (wots) served atop a large injera — a feast of flavors and textures.",
     ingredients: "Injera, shiro, misir wot, gomen, atakilt wot, kik alicha, ayib, and seasonal vegetables",
     culturalNote: "Meaning 'a bit of everything' — the ultimate fasting meal. Showcases Ethiopia's incredible diversity of plant-based cooking.",
-    image: "https://images.unsplash.com/photo-1541014741259-de529411b96a?w=1200&q=80",
+    image: "/f&b/beyayenetu.jpg",
     category: "Platter",
   },
   {
@@ -438,7 +432,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Shredded injera mixed with spicy berbere sauce and niter kibbeh — a popular breakfast or leftover dish.",
     ingredients: "Injera, berbere, niter kibbeh, onions, tomatoes, optional yogurt",
     culturalNote: "Creative use of leftover injera. Served with a dollop of fresh yogurt to cool the heat. A comfort food staple.",
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1200&q=80",
+    image: "/f&b/firfir.jpg",
     category: "Breakfast",
   },
   {
@@ -448,7 +442,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Cubes of raw prime beef dipped in mitmita and niter kibbeh — the purist's version of kitfo, unminced.",
     ingredients: "Prime beef cubes, mitmita, niter kibbeh, awaze (chili paste)",
     culturalNote: "Served with injera and ayib. A test of quality — only the freshest, most tender beef is used. Reserved for special occasions.",
-    image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=1200&q=80",
+    image: "/f&b/gored gored.jpg",
     category: "Raw Specialty",
   },
   {
@@ -458,17 +452,7 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Ritual preparation of coffee from green beans — roasted, ground, and brewed in a jebena (clay pot) over charcoal.",
     ingredients: "Green coffee beans (heirloom varieties), water, optional incense (frankincense/myhrr)",
     culturalNote: "Birthplace of coffee. The ceremony takes 1–2 hours with three rounds (abol, tona, baraka) — a social ritual of friendship and respect.",
-    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80",
+    image: "/f&b/bunna.jpg",
     category: "Beverage & Ritual",
-  },
-  {
-    id: "teff-grains",
-    name: "Teff & Ancient Grains",
-    nameAmharic: "ጤፍ",
-    description: "The world's smallest grain — gluten-free, nutrient-dense, and the foundation of injera. Grown in Ethiopia for millennia.",
-    ingredients: "Teff grain (white, brown, red varieties), also: sorghum, millet, barley",
-    culturalNote: "Teff is a national treasure. Ethiopia is the center of diversity for this ancient grain, now gaining global recognition as a superfood.",
-    image: "https://images.unsplash.com/photo-1586201375761-83865011e3b9?w=1200&q=80",
-    category: "Core Ingredient",
-  },
+  }
 ];
