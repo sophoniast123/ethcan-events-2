@@ -11,6 +11,7 @@ import Pillars from "@/components/Pillars";
 import Programme from "@/components/Programme";
 import Registration from "@/components/Registration";
 import Sponsors from "@/components/Sponsors";
+import SponsorshipPackages from "@/components/SponsorshipPackages";
 import WorldTourismDay from "@/components/WorldTourismDay";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <Programme />
       <Participation />
       <Sponsors />
+      <SponsorshipPackages />
       <Gallery />
       <Registration />
       <Footer />
