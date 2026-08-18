@@ -71,6 +71,7 @@ export default function Footer() {
             <li>📞 {EVENT.phone1}</li>
             <li>📞 {EVENT.phone2}</li>
             <li>🏢 {EVENT.address}</li>
+            <li>🏢 {EVENT.address2}</li>
             <li>🕒 {EVENT.hours}</li>
           </ul>
           <div className="mt-5 flex gap-3">

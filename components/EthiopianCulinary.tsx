@@ -1,10 +1,9 @@
-
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { ETHIOPIAN_CULINARY, type CulinaryItem } from "@/lib/data";
+import { ETHIOPIAN_CULINARY } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 
 const TRANSITION_DURATION = 0.5;
@@ -12,21 +11,19 @@ const AUTO_PLAY_INTERVAL = 5000;
 
 export default function EthiopianCulinary() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const items = ETHIOPIAN_CULINARY;
   const itemCount = items.length;
+  const currentItem = items[currentIndex];
 
-  // Auto-play logic
+  // Auto-play logic - runs continuously
   useEffect(() => {
-    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % itemCount);
     }, AUTO_PLAY_INTERVAL);
     return () => clearInterval(timer);
-  }, [isPaused, itemCount]);
+  }, [itemCount]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -73,18 +70,10 @@ export default function EthiopianCulinary() {
     setTouchStart(null);
   };
 
-  const currentItem = items[currentIndex];
-
   return (
     <section
       id="ethiopian-culinary"
       className="relative overflow-hidden bg-gradient-to-br from-terra-50 via-cream to-gold-50 py-24"
-      ref={containerRef}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
     >
       {/* Ambient warm glows */}
       <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-terra-300/30 blur-3xl" />
@@ -106,7 +95,14 @@ export default function EthiopianCulinary() {
         </Reveal>
 
         {/* Carousel */}
-        <div className="mt-16 relative" role="region" aria-label="Ethiopian Culinary carousel">
+        <div
+          className="relative mx-auto mt-16"
+          role="region"
+          aria-label="Ethiopian Culinary carousel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {/* Main slide */}
           <motion.div
             className="relative rounded-3xl overflow-hidden bg-white shadow-2xl"
@@ -207,10 +203,10 @@ export default function EthiopianCulinary() {
             </div>
           </motion.div>
 
-          {/* Navigation arrows */}
+          {/* Navigation arrows - visible and clickable */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 p-3 rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition-colors z-10 focus:outline-none focus:ring-2 focus:ring-terra-400"
+            className="absolute left-4 top-[calc(50%-48px)] -translate-y-1/2 p-3 rounded-full bg-ink/80 backdrop-blur text-white hover:bg-terra-400 hover:text-ink transition-all duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-terra-400 shadow-xl"
             aria-label="Previous dish"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -220,7 +216,7 @@ export default function EthiopianCulinary() {
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 p-3 rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition-colors z-10 focus:outline-none focus:ring-2 focus:ring-terra-400"
+            className="absolute right-4 top-[calc(50%-48px)] -translate-y-1/2 p-3 rounded-full bg-ink/80 backdrop-blur text-white hover:bg-terra-400 hover:text-ink transition-all duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-terra-400 shadow-xl"
             aria-label="Next dish"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,45 +232,6 @@ export default function EthiopianCulinary() {
             transition={{ duration: AUTO_PLAY_INTERVAL / 1000, ease: "linear" }}
           />
         </div>
-
-        {/* All dishes grid (visible on larger screens) */}
-        <Reveal delay={0.3} className="mt-16 hidden lg:block">
-          <h3 className="font-display text-2xl font-bold text-center text-ink mb-8">
-            All Featured Dishes
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {items.map((item, i) => (
-              <button
-                key={item.id}
-                onClick={() => goToSlide(i)}
-                className={`group relative rounded-2xl overflow-hidden p-4 text-left transition-all duration-300 ${
-                  i === currentIndex
-                    ? "bg-terra-50 border-2 border-terra-400 shadow-lg shadow-terra-200/50"
-                    : "bg-white border border-ink/10 hover:border-terra-300/50 hover:shadow-lg hover:-translate-y-1"
-                }`}
-                aria-current={i === currentIndex ? "true" : "false"}
-              >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={80}
-                  height={60}
-                  className="absolute inset-0 object-cover opacity-15 group-hover:opacity-25 transition-opacity"
-                  sizes="80px"
-                />
-                <div className="relative z-10">
-                  <div className="text-xs font-bold uppercase tracking-wider text-terra-600">{item.category}</div>
-                  <h4 className="mt-1 font-display text-lg font-bold text-ink group-hover:text-terra-600 transition-colors">
-                    {item.name}
-                  </h4>
-                  {item.nameAmharic && (
-                    <p className="mt-0.5 text-xs text-gold-600 font-display">{item.nameAmharic}</p>
-                  )}
-                </div>
-              </button>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

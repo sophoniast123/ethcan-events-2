@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { PANAFRICA_CULTURES, type CultureItem } from "@/lib/data";
+import { PANAFRICA_CULTURES } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 
 const TRANSITION_DURATION = 0.3;
@@ -11,21 +11,19 @@ const AUTO_PLAY_INTERVAL = 5000;
 
 export default function PanAfricaCultures() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   const items = PANAFRICA_CULTURES;
   const itemCount = items.length;
+  const currentItem = items[currentIndex];
 
-  // Auto-play logic
+  // Auto-play logic - runs continuously
   useEffect(() => {
-    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % itemCount);
     }, AUTO_PLAY_INTERVAL);
     return () => clearInterval(timer);
-  }, [isPaused, itemCount]);
+  }, [itemCount]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -72,18 +70,10 @@ export default function PanAfricaCultures() {
     setTouchStart(null);
   };
 
-  const currentItem = items[currentIndex];
-
   return (
     <section
       id="pan-africa-cultures"
       className="relative overflow-hidden bg-cream py-24"
-      ref={containerRef}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
     >
       <div className="pattern-dots absolute inset-0 opacity-60" />
       <div className="container-x relative">
@@ -100,7 +90,14 @@ export default function PanAfricaCultures() {
         </Reveal>
 
         {/* Carousel */}
-        <div className="mt-16 relative" role="region" aria-label="PanAfrica Cultures carousel">
+        <div
+          className="relative mx-auto mt-16"
+          role="region"
+          aria-label="PanAfrica Cultures carousel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           {/* Main slide */}
           <motion.div
             className="relative rounded-3xl overflow-hidden bg-ink"
@@ -167,7 +164,7 @@ export default function PanAfricaCultures() {
               </motion.div>
             </div>
 
-            {/* Slide indicator */}
+            {/* Slide indicator dots */}
             <div className="absolute bottom-6 left-8 right-8 flex items-center justify-between sm:justify-end">
               <div className="flex items-center gap-2">
                 {items.map((_, i) => (
@@ -187,10 +184,10 @@ export default function PanAfricaCultures() {
             </div>
           </motion.div>
 
-          {/* Navigation arrows */}
+          {/* Navigation arrows - visible and clickable */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 p-3 rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition-colors z-10 focus:outline-none focus:ring-2 focus:ring-gold-400"
+            className="absolute left-4 top-[calc(50%-48px)] -translate-y-1/2 p-3 rounded-full bg-ink/80 backdrop-blur text-white hover:bg-gold-400 hover:text-ink transition-all duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-gold-400 shadow-xl"
             aria-label="Previous culture"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,7 +197,7 @@ export default function PanAfricaCultures() {
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 p-3 rounded-full bg-white/10 backdrop-blur text-white hover:bg-white/20 transition-colors z-10 focus:outline-none focus:ring-2 focus:ring-gold-400"
+            className="absolute right-4 top-[calc(50%-48px)] -translate-y-1/2 p-3 rounded-full bg-ink/80 backdrop-blur text-white hover:bg-gold-400 hover:text-ink transition-all duration-300 z-20 focus:outline-none focus:ring-2 focus:ring-gold-400 shadow-xl"
             aria-label="Next culture"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,26 +226,21 @@ export default function PanAfricaCultures() {
                 onClick={() => goToSlide(i)}
                 className={`group relative rounded-2xl overflow-hidden p-4 text-left transition-all duration-300 ${
                   i === currentIndex
-                    ? "bg-gold-50 border-2 border-gold-400 shadow-lg shadow-gold-200/50"
-                    : "bg-white border border-ink/10 hover:border-gold-300/50 hover:shadow-lg hover:-translate-y-1"
+                    ? "bg-gold-50 border-2 border-gold-400"
+                    : "bg-white/60 hover:bg-white border border-ink/10"
                 }`}
-                aria-current={i === currentIndex ? "true" : "false"}
               >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={80}
-                  height={60}
-                  className="absolute inset-0 object-cover opacity-15 group-hover:opacity-25 transition-opacity"
-                  sizes="80px"
-                />
-                <div className="relative z-10">
-                  <div className="text-xs font-bold uppercase tracking-wider text-gold-600">{item.category}</div>
-                  <h4 className="mt-1 font-display text-lg font-bold text-ink group-hover:text-gold-600 transition-colors">
-                    {item.name}
-                  </h4>
-                  <p className="mt-1 text-xs text-ink/60">{item.region}</p>
+                <div className="aspect-square mb-3 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="160px"
+                  />
                 </div>
+                <h4 className="font-bold text-ink group:text-gold-600">{item.name}</h4>
+                <p className="text-sm text-ink/60 mt-1">{item.country}</p>
               </button>
             ))}
           </div>
