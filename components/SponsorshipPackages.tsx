@@ -11,12 +11,12 @@ export default function SponsorshipPackages() {
     {
       id: "premium",
       title: "Premium Sponsor",
-      image: "/sponsor/pkg1.jpg",
+      image: "/sponsor/pg2.jpg",
     },
     {
       id: "standard",
       title: "Standard Sponsor",
-      image: "/sponsor/pg2.jpg",
+      image: "/sponsor/pkg1.jpg",
     },
   ];
 
