@@ -20,8 +20,9 @@ export const EVENT = {
   // Countdown target: World Tourism Day 2026
   targetDate: "2026-09-24T09:00:00+03:00",
   email: "ethcanevents@gmail.com",
-  phone1 : "+251 976 629 099 / +251 976 629 199 (ETH)",
-  phone2 : "+1-519-722-8295 (CAN)",
+  phone1 : "+251-976-553-099 (ETH)",
+  phone2: "+251-976-553-199 (ETH)",
+  phone3 : "+1-519-722-8295 (CAN)",
   address: "Glory Building, 6th Floor, Office 605, Addis Ababa, Ethiopia",
   address2: " 10 Indigo Street, Kitchener, Ontario, Canada, N2E4E8",
   hours: "Mon–Sat, 8:30 AM – 6:30 PM EAT",

@@ -70,6 +70,7 @@ export default function Footer() {
             </li>
             <li>📞 {EVENT.phone1}</li>
             <li>📞 {EVENT.phone2}</li>
+            <li>📞 {EVENT.phone3}</li>
             <li>🏢 {EVENT.address}</li>
             <li>🏢 {EVENT.address2}</li>
             <li>🕒 {EVENT.hours}</li>
