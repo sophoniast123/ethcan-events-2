@@ -102,7 +102,11 @@ export const PILLARS = [
 
 export type ProgrammeItem = {
   title: string;
+  morning?: string;
+  afternoon?: string;
+  night?: string;
   category: "Ceremonies" | "Forums & Summits" | "Exhibitions" | "Culture & Community";
+  alternateCategory: "Ceremonies" | "Forums & Summits" | "Exhibitions" | "Culture & Community";
   day: string;
   text: string;
   image?: string;
@@ -112,77 +116,88 @@ export const PROGRAMME: ProgrammeItem[] = [
   {
     title: "Grand Opening Ceremony",
     category: "Ceremonies",
+    alternateCategory: "Exhibitions",
     day: "Day 1",
     text: "Official opening with government leaders, UN Tourism representatives, diplomatic corps and cultural performances.",
-    image: PROGRAMME_IMAGES[0],
+    morning: "Opening Ceremony & New Year Celebrations",
+    afternoon: "Cradle of Mankind Interactive Exhibition",
+    night: "The Demera Cultural Night",
+    image: PROGRAMME_IMAGES[0]
   },
   {
-    title: "High-Level Policy Dialogues",
+    title: "The Digital Agenda & AI Summit",
     category: "Forums & Summits",
-    day: "Day 1–2",
+    alternateCategory: "Culture & Community",
+    day: "Day 2",
     text: "Ministers, policymakers and industry leaders shape the digital agenda for African tourism policy.",
+    morning: "AI & Smart Destination Forum",
+    afternoon: "Tourism Investment & Business Networking Summit",
+    night: "Virtual Reality (VR) Landscapes Showcase",
     image: PROGRAMME_IMAGES[1],
   },
   {
-    title: "AI & Smart Tourism Summit",
-    category: "Forums & Summits",
-    day: "Day 2",
+    title: "Adventure, Eco-Tourism & Closing",
+    category: "Culture & Community",
+    alternateCategory: "Exhibitions",
+    day: "Day 3",
     text: "The flagship summit on artificial intelligence, big data and smart destinations redesigning global tourism.",
+    morning: "Youth Tech Startup Pitches, Traditional Fashion Expo and culnary tasting",
+    afternoon: "Closing Ceremony",
     image: PROGRAMME_IMAGES[2],
   },
-  {
-    title: "Tourism Investment Forum",
-    category: "Forums & Summits",
-    day: "Day 2–3",
-    text: "Deal-rooms and pitch sessions connecting investors with hospitality and destination-development projects.",
-    image: PROGRAMME_IMAGES[3],
-  },
-  {
-    title: "Destination & Hospitality Exhibitions",
-    category: "Exhibitions",
-    day: "Day 1–3",
-    text: "Destinations, hotels, airlines and travel-tech innovators exhibit to thousands of trade and public visitors.",
-    image: PROGRAMME_IMAGES[4],
-  },
-  {
-    title: "Pan-African Cultural Programmes",
-    category: "Culture & Community",
-    day: "Day 1–3",
-    text: "Music, dance, cuisine and fashion showcases celebrating Ethiopia and the wider African continent.",
-    image: PROGRAMME_IMAGES[5],
-  },
-  {
-    title: "Ethiopian Diaspora Tourism & Investment Forum",
-    category: "Forums & Summits",
-    day: "Day 3",
-    text: "Dedicated forum engaging the global Ethiopian diaspora in tourism promotion and investment.",
-    image: PROGRAMME_IMAGES[6],
-  },
-  {
-    title: "Digital Skills & Youth Innovation Lab",
-    category: "Culture & Community",
-    day: "Day 3",
-    text: "Hands-on workshops equipping young Ethiopians with AI and digital-tourism skills, plus a startup showcase.",
-    image: PROGRAMME_IMAGES[7],
-  },
-  {
-    title: "Sustainable Tourism Roundtable",
-    category: "Forums & Summits",
-    day: "Day 3",
-    text: "Experts chart a responsible, community-first path for tourism growth across the Horn of Africa.",
-  },
-  {
-    title: "City & Heritage Familiarization Tours",
-    category: "Culture & Community",
-    day: "Day 3",
-    text: "Guided experiences across Addis Ababa's museums, markets and landmarks for international delegates.",
-  },
-  {
-    title: "Closing Ceremony & Addis Declaration",
-    category: "Ceremonies",
-    day: "Day 3",
-    text: "Adoption of the Addis Ababa declaration on AI and the digital future of African tourism.",
-  },
+  // {
+  //   title: "Tourism Investment Forum",
+  //   category: "Forums & Summits",
+  //   day: "Day 2–3",
+  //   text: "Deal-rooms and pitch sessions connecting investors with hospitality and destination-development projects.",
+  //   image: PROGRAMME_IMAGES[3],
+  // },
+  // {
+  //   title: "Destination & Hospitality Exhibitions",
+  //   category: "Exhibitions",
+  //   day: "Day 1–3",
+  //   text: "Destinations, hotels, airlines and travel-tech innovators exhibit to thousands of trade and public visitors.",
+  //   image: PROGRAMME_IMAGES[4],
+  // },
+  // {
+  //   title: "Pan-African Cultural Programmes",
+  //   category: "Culture & Community",
+  //   day: "Day 1–3",
+  //   text: "Music, dance, cuisine and fashion showcases celebrating Ethiopia and the wider African continent.",
+  //   image: PROGRAMME_IMAGES[5],
+  // },
+  // {
+  //   title: "Ethiopian Diaspora Tourism & Investment Forum",
+  //   category: "Forums & Summits",
+  //   day: "Day 3",
+  //   text: "Dedicated forum engaging the global Ethiopian diaspora in tourism promotion and investment.",
+  //   image: PROGRAMME_IMAGES[6],
+  // },
+  // {
+  //   title: "Digital Skills & Youth Innovation Lab",
+  //   category: "Culture & Community",
+  //   day: "Day 3",
+  //   text: "Hands-on workshops equipping young Ethiopians with AI and digital-tourism skills, plus a startup showcase.",
+  //   image: PROGRAMME_IMAGES[7],
+  // },
+  // {
+  //   title: "Sustainable Tourism Roundtable",
+  //   category: "Forums & Summits",
+  //   day: "Day 3",
+  //   text: "Experts chart a responsible, community-first path for tourism growth across the Horn of Africa.",
+  // },
+  // {
+  //   title: "City & Heritage Familiarization Tours",
+  //   category: "Culture & Community",
+  //   day: "Day 3",
+  //   text: "Guided experiences across Addis Ababa's museums, markets and landmarks for international delegates.",
+  // },
+  // {
+  //   title: "Closing Ceremony & Addis Declaration",
+  //   category: "Ceremonies",
+  //   day: "Day 3",
+  //   text: "Adoption of the Addis Ababa declaration on AI and the digital future of African tourism.",
+  // },
 ];
 
 export const PROGRAMME_FILTERS = [

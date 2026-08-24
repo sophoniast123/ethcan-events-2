@@ -84,10 +84,19 @@ export default function Programme() {
                 )}
                 <div className="flex flex-1 flex-col p-6">
                   <span className="text-[11px] font-bold uppercase tracking-widest text-terra-500">
-                    {p.category}
+                    {p.category} & {p.alternateCategory}
                   </span>
                   <h3 className="mt-1.5 font-display text-lg font-bold text-ink">{p.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/70">{p.text}</p>
+                  {p.morning && (
+                    <p className="mt-2 text-sm leading-relaxed text-ink/70">Morning Session: <b>{p.morning}</b></p>
+                  )}
+                  {p.afternoon && (
+                    <p className="mt-2 text-sm leading-relaxed text-ink/70">Afternoon Session: <b>{p.afternoon}</b></p>
+                  )}
+                  {p.night && (
+                    <p className="mt-2 text-sm leading-relaxed text-ink/70">Night Session: <b>{p.night}</b></p>
+                  )}
                 </div>
               </motion.article>
             ))}
