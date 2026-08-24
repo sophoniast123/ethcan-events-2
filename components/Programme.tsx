@@ -23,7 +23,7 @@ export default function Programme() {
             Activities &amp; <span className="text-emerald2-600">Forums</span>
           </h2>
           <p className="mt-4 text-ink/70">
-            Four days of summits, exhibitions, ceremonies and cultural celebration across
+            Three days of summits, exhibitions, ceremonies and cultural celebration across
             Addis Ababa.
           </p>
         </Reveal>
