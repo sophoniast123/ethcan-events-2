@@ -130,7 +130,7 @@ export default function PanAfricaCultures() {
             <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-transparent" />
 
             {/* Content */}
-            <div className="absolute inset-0 flex items-end p-8 sm:p-12 lg:p-16">
+            {/* <div className="absolute inset-0 flex items-end p-8 sm:p-12 lg:p-16">
               <motion.div
                 className="max-w-3xl"
                 initial={{ opacity: 0, y: 30 }}
@@ -138,12 +138,12 @@ export default function PanAfricaCultures() {
                 transition={{ duration: TRANSITION_DURATION, delay: 0.2 }}
               >
                 {/* Category badge */}
-                <span className="inline-flex items-center gap-2 rounded-full bg-gold-500/20 border border-gold-500/30 px-4 py-1.5 text-sm font-bold text-gold-300 backdrop-blur">
+                {/* <span className="inline-flex items-center gap-2 rounded-full bg-gold-500/20 border border-gold-500/30 px-4 py-1.5 text-sm font-bold text-gold-300 backdrop-blur">
                   {currentItem.category}
                 </span>
 
                 {/* Region & Country */}
-                <div className="mt-4 flex flex-wrap items-center gap-3 text-white/80 text-sm">
+                {/* <div className="mt-4 flex flex-wrap items-center gap-3 text-white/80 text-sm">
                   <span className="flex items-center gap-1.5">
                     <span className="relative top-[1px] w-2 h-2 rounded-full bg-gold-400" />
                     {currentItem.region}
@@ -153,14 +153,14 @@ export default function PanAfricaCultures() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                {/* <h3 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   {currentItem.name}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 text-lg text-white/90 leading-relaxed max-w-xl">
+                {/*<p className="mt-4 text-lg text-white/90 leading-relaxed max-w-xl">
                   {currentItem.description}
-                </p>
+                </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
               </motion.div>
             </div>
 

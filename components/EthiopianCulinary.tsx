@@ -143,24 +143,24 @@ export default function EthiopianCulinary() {
                 transition={{ duration: TRANSITION_DURATION, delay: 0.2 }}
               >
                 {/* Category badge */}
-                <span className="inline-flex items-center gap-2 rounded-full bg-terra-500/20 border border-terra-500/30 px-4 py-1.5 text-sm font-bold text-terra-300 backdrop-blur">
+                {/*<span className="inline-flex items-center gap-2 rounded-full bg-terra-500/20 border border-terra-500/30 px-4 py-1.5 text-sm font-bold text-terra-300 backdrop-blur">
                   {currentItem.category}
                 </span>
 
                 {/* Amharic name if available */}
-                {currentItem.nameAmharic && (
+                 {currentItem.nameAmharic && (
                   <div className="mt-3 text-gold-300 text-lg font-display">
                     {currentItem.nameAmharic}
                   </div>
                 )}
 
                 {/* Title */}
-                <h3 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                 <h3 className="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   {currentItem.name}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 text-lg text-white/90 leading-relaxed max-w-xl">
+                {/* <p className="mt-4 text-lg text-white/90 leading-relaxed max-w-xl">
                   {currentItem.description}
                 </p>
 
@@ -171,14 +171,6 @@ export default function EthiopianCulinary() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: TRANSITION_DURATION, delay: 0.4 }}
                 >
-                  <div className="rounded-xl bg-white/10 backdrop-blur p-4 border border-white/20">
-                    <p className="text-xs font-bold uppercase tracking-wider text-gold-300">Key Ingredients</p>
-                    <p className="mt-2 text-white/90 text-sm">{currentItem.ingredients}</p>
-                  </div>
-                  <div className="rounded-xl bg-white/10 backdrop-blur p-4 border border-white/20">
-                    <p className="text-xs font-bold uppercase tracking-wider text-gold-300">Cultural Note</p>
-                    <p className="mt-2 text-white/90 text-sm">{currentItem.culturalNote}</p>
-                  </div>
                 </motion.div>
               </motion.div>
             </div>
