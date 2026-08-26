@@ -469,7 +469,28 @@ export const ETHIOPIAN_CULINARY: CulinaryItem[] = [
     description: "Ritual preparation of coffee from green beans — roasted, ground, and brewed in a jebena (clay pot) over charcoal.",
     ingredients: "Green coffee beans (heirloom varieties), water, optional incense (frankincense/myhrr)",
     culturalNote: "Birthplace of coffee. The ceremony takes 1–2 hours with three rounds (abol, tona, baraka) — a social ritual of friendship and respect.",
-    image: "/f&b/bunna.jpg",
+    image: "/f&b/coffee.jpg",
     category: "Beverage & Ritual",
-  }
+  },
+  {
+    id: "Tej",
+    name: "Tej",
+    nameAmharic: "ጠጅ",
+    description: "A traditional Ethiopian honey wine, often served during celebrations and special occasions.",
+    ingredients: "Honey, water, yeast, optional spices",
+    culturalNote: "A symbol of hospitality and celebration. Tej is often shared among friends and family during festive gatherings.",
+    image: "/f&b/tela.jpg",
+    category: "Beverage & Ritual",
+  },
+  {
+    id: "tela",
+    name: "Tela",
+    nameAmharic: "ጠላ",
+    description: "A traditional Ethiopian tea, often served with milk and sugar.",
+    ingredients: "Tea leaves, water, milk, sugar",
+    culturalNote: "A symbol of hospitality and warmth. Tela is often shared among friends and family during casual gatherings.",
+    image: "/f&b/tej.jpg",
+    category: "Beverage & Ritual",
+  },
 ];
+

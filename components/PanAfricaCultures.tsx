@@ -6,7 +6,7 @@ import Image from "next/image";
 import { PANAFRICA_CULTURES } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 
-const TRANSITION_DURATION = 0.3;
+const TRANSITION_DURATION = 0.5;
 const AUTO_PLAY_INTERVAL = 5000;
 
 export default function PanAfricaCultures() {

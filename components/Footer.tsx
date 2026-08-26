@@ -77,10 +77,10 @@ export default function Footer() {
           </ul>
           <div className="mt-5 flex gap-3">
             {[
-              { s: "𝕏", href: "https://twitter.com/", label: "X (Twitter)" },
-              { s: "f", href: "https://facebook.com/", label: "Facebook" },
-              { s: "in", href: "https://linkedin.com/", label: "LinkedIn" },
-              { s: "▶", href: "https://youtube.com/", label: "YouTube" },
+              { s: "in", href: "https://www.instagram.com/ethcan_events/", label: "Instagram" },
+              { s: "f", href: "https://facebook.com/profile.php?id=61592459900451", label: "Facebook" },
+              { s: "t", href: "https://www.tiktok.com/@ethcan_events", label: "TikTok" },
+              // { s: "▶", href: "https://youtube.com/", label: "YouTube" },
             ].map(({ s, href, label }) => (
               <a
                 key={s}
