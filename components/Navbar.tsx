@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { NAV_LINKS } from "@/lib/data";
 
 export default function Navbar() {
@@ -14,6 +14,19 @@ export default function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToSection = useCallback((href: string) => {
+    setOpen(false);
+    // Use setTimeout to allow the menu to start closing before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (href === "#home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 100);
   }, []);
 
   return (
@@ -101,7 +114,10 @@ export default function Navbar() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(l.href);
+                    }}
                     className="block rounded-xl px-4 py-3 font-semibold text-white/90 transition hover:bg-white/10 hover:text-gold-300"
                   >
                     {l.label}
@@ -112,7 +128,10 @@ export default function Navbar() {
               <li className="pt-2">
                 <a
                   href="#register"
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("#register");
+                  }}
                   className="btn-primary w-full"
                 >
                   Register Now
